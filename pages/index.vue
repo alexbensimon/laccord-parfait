@@ -7,23 +7,18 @@
   </section>
 </template>
 
-<script lang="ts">
+<script>
 // Imports for all components
 import HomepageBanner from "~/components/HomepageBanner.vue";
 import SlicesBlock from "~/components/SlicesBlock.vue";
 
 export default {
   name: "Home",
-  layout: "homepage",
   components: {
     HomepageBanner,
     SlicesBlock,
   },
-  head() {
-    return {
-      title: "Prismic Nuxt.js Multi Page Website",
-    };
-  },
+  layout: "homepage",
   async asyncData({ $prismic, error }) {
     try {
       // Query to get the home page content
@@ -38,6 +33,11 @@ export default {
     } catch (e) {
       error({ statusCode: 404, message: "Page not found" });
     }
+  },
+  head() {
+    return {
+      title: "Prismic Nuxt.js Multi Page Website",
+    };
   },
 };
 </script>
