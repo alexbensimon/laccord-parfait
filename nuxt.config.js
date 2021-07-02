@@ -12,26 +12,24 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Nuxt + Prismic showcase"
-      }
+        content: "Nuxt + Prismic showcase",
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic"
+        href: "https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic",
       },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic"
+        href: "https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic",
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/icon?family=Material+Icons"
-      }
-    ]
+        href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+      },
+    ],
   },
 
   /*
@@ -54,11 +52,11 @@ export default {
    */
   modules: [
     // https://prismic-nuxt.js.org/
-    "@nuxtjs/prismic"
+    "@nuxtjs/prismic",
   ],
 
   prismic: {
-    endpoint: "https://laccord-parfait.cdn.prismic.io/api/v2"
+    endpoint: "https://laccord-parfait.cdn.prismic.io/api/v2",
   },
 
   /*
@@ -71,10 +69,12 @@ export default {
     extend(config, ctx) {
       // to transform link with <nuxt-link> for the htmlSerializer
       config.resolve.alias["vue"] = "vue/dist/vue.common";
-    }
+    },
   },
 
   generate: {
-    fallback: "404.html" // Netlify reads a 404.html, Nuxt will load as an SPA
-  }
+    fallback: "404.html", // Netlify reads a 404.html, Nuxt will load as an SPA
+  },
+
+  buildModules: ["@nuxt/typescript-build"],
 };
