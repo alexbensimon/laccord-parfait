@@ -1,4 +1,5 @@
 # Prismic Nuxt.js Multi-page website example
+# L'accord parfait
 
 > [Nuxt.js](https://nuxtjs.org) example multi-page website project with content managed in [Prismic](https://prismic.io)
 
