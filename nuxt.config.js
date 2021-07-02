@@ -76,5 +76,5 @@ export default {
     fallback: "404.html", // Netlify reads a 404.html, Nuxt will load as an SPA
   },
 
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/tailwindcss"],
 };
