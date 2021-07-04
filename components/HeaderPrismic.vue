@@ -1,11 +1,20 @@
 <template>
-  <header class="site-header">
-    <p v-if="$store.state.menu === 'Please create a menu document'" class="logo">{{ $store.state.menu }}</p>
-    <nuxt-link to="/" class="logo">{{ $prismic.asText($store.state.menu.title) }}</nuxt-link>
+  <header class="site-header flex items-center justify-between">
+    <p
+      v-if="$store.state.menu === 'Please create a menu document'"
+      class="logo"
+    >
+      {{ $store.state.menu }}
+    </p>
+    <nuxt-link to="/">
+      <img class="w-72 inline-block mt-5" :src="$store.state.menu.logo.url" />
+    </nuxt-link>
     <nav>
       <ul>
         <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id">
-          <prismic-link :field="menuLink.link">{{ $prismic.asText(menuLink.label) }}</prismic-link>
+          <prismic-link :field="menuLink.link">{{
+            $prismic.asText(menuLink.label)
+          }}</prismic-link>
         </li>
       </ul>
     </nav>
@@ -14,8 +23,8 @@
 
 <script>
 export default {
-  name: 'header-prismic',
-}
+  name: "header-prismic",
+};
 </script>
 
 <style lang="sass">
@@ -25,23 +34,15 @@ export default {
   color: #484d52
   font-weight: 700
   a
-    color: #484d52
+    color: #1A1919
     font-weight: 700
   nav a:hover
     color: #72767B
 
-.homepage .site-header
-  color: #ffffff
-  a
-    color: #ffffff
-  nav a:hover
-    color: #c8c9cb
 
 .site-header
   .logo
-    display: inline-block
-    font-size: 22px
-    font-weight: 900
+
   nav
     float: right
     ul
@@ -77,5 +78,3 @@ export default {
         margin-left: 10px
         margin-right: 10px
 </style>
-
-

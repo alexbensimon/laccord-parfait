@@ -2,10 +2,7 @@
   <section
     class="homepage-banner"
     :style="{
-      backgroundImage:
-        'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(' +
-        banner.image.url +
-        ')',
+      backgroundImage: 'url(' + banner.image.url + ')',
     }"
   >
     <!-- Template for page title. -->
@@ -44,20 +41,20 @@ export default {
 
 .banner-title, .banner-description
   width: 90%
-  max-width: 490px
+  max-width: 800px
   margin-left: auto
   margin-right: auto
 
 .banner-title
-  color: #ffffff
+  color: #1A1919
   font-size: 70px
   font-weight: 900
   line-height: 70px
 
 .banner-button
-  background: #ffffff
+  background: #AA9461
   border-radius: 7px
-  color: #484D52
+  color: #fff
   font-size: 14px
   font-weight: 700
   padding: 15px 40px

@@ -36,7 +36,7 @@ export default {
   },
   head() {
     return {
-      title: "Prismic Nuxt.js Multi Page Website",
+      title: "L'accord parfait",
     };
   },
 };

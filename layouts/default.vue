@@ -1,28 +1,25 @@
 <template>
   <div>
-    <header-prismic/>
+    <header-prismic />
     <nuxt />
-    <footer-prismic/>
   </div>
 </template>
 
 <script>
-import HeaderPrismic from '~/components/HeaderPrismic.vue'
-import FooterPrismic from '~/components/FooterPrismic.vue'
+import HeaderPrismic from "~/components/HeaderPrismic.vue";
 
 export default {
   components: {
     HeaderPrismic,
-    FooterPrismic
   },
-  head () {
+  head() {
     return {
-      title: 'Prismic Nuxt.js Multi Page Website',
-    }
+      title: "L'accord parfait",
+    };
   },
   // Called before rendering the layout (even for error page)
   async middleware({ store, $prismic }) {
-    await store.dispatch('fetchMenu', $prismic)
-  }
-}
+    await store.dispatch("fetchMenu", $prismic);
+  },
+};
 </script>

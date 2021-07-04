@@ -1,37 +1,37 @@
 <template>
   <section>
     <!-- Slices block component -->
-    <slices-block :slices="slices"/>
+    <slices-block :slices="slices" />
   </section>
 </template>
 
 <script>
 // Imports for Prismic Slice components
-import SlicesBlock from '~/components/SlicesBlock.vue'
+import SlicesBlock from "~/components/SlicesBlock.vue";
 
 export default {
-  name: 'page',
+  name: "page",
   components: {
-    SlicesBlock
+    SlicesBlock,
   },
-  head () {
+  head() {
     return {
-      title: 'Prismic Nuxt.js Multi Page Website',
-    }
+      title: "L'accord parfait",
+    };
   },
   async asyncData({ $prismic, params, error }) {
-    try{
+    try {
       // Query to get post content
-      const document = (await $prismic.api.getByUID('page', params.uid)).data
+      const document = (await $prismic.api.getByUID("page", params.uid)).data;
 
       return {
         // Set slices as variable
-        slices: document.page_content
-      }
+        slices: document.page_content,
+      };
     } catch (e) {
       // Returns error page
-      error({ statusCode: 404, message: 'Page not found' })
+      error({ statusCode: 404, message: "Page not found" });
     }
   },
-}
+};
 </script>
