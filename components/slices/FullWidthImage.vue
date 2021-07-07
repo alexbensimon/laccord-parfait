@@ -6,8 +6,13 @@
 
 <script>
 export default {
-  props: ["slice"],
-  name: "image-caption-slice",
+  name: "ImageCaptionSlice",
+  props: {
+    slice: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
 

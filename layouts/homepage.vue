@@ -12,14 +12,14 @@ export default {
   components: {
     HeaderPrismic,
   },
+  // Called before rendering the layout (even for error page)
+  async middleware({ store, $prismic }) {
+    await store.dispatch("fetchMenu", $prismic);
+  },
   head() {
     return {
       title: "L'accord parfait",
     };
-  },
-  // Called before rendering the layout (even for error page)
-  async middleware({ store, $prismic }) {
-    await store.dispatch("fetchMenu", $prismic);
   },
 };
 </script>

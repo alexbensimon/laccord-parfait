@@ -1,12 +1,9 @@
 <template>
-  <header class="site-header flex items-center justify-between">
-    <p
-      v-if="$store.state.menu === 'Please create a menu document'"
-      class="logo"
-    >
-      {{ $store.state.menu }}
-    </p>
-    <nuxt-link to="/">
+  <header
+    class="site-header flex items-center mt-5"
+    :class="isRootRoute ? 'justify-end' : 'justify-between'"
+  >
+    <nuxt-link v-if="!isRootRoute" to="/">
       <img class="w-72 inline-block mt-5" :src="$store.state.menu.logo.url" />
     </nuxt-link>
     <nav>
@@ -21,10 +18,13 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: "header-prismic",
-};
+<script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+
+@Component
+export default class HeaderPrismic extends Vue {
+  isRootRoute = this.$nuxt.$route.path === "/";
+}
 </script>
 
 <style lang="sass">
@@ -39,10 +39,7 @@ export default {
   nav a:hover
     color: #72767B
 
-
 .site-header
-  .logo
-
   nav
     float: right
     ul

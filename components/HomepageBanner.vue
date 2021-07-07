@@ -1,37 +1,37 @@
 <template>
   <section
-    class="homepage-banner"
+    class="homepage-banner mb-20 -mt-16 pt-20 pb-20 space-y-4"
     :style="{
       backgroundImage: 'url(' + banner.image.url + ')',
     }"
   >
+    <img class="max-w-lg inline-block" :src="$store.state.menu.logo.url" />
+
     <!-- Template for page title. -->
     <div class="banner-content container">
       <h2 class="banner-title">
         {{ $prismic.asText(banner.title) }}
       </h2>
-      <!-- Template for page tagline. -->
-      <p class="banner-description text-barley-corn">
-        {{ $prismic.asText(banner.tagline) }}
-      </p>
-      <prismic-link class="banner-button" :field="banner.button_link">
-        {{ $prismic.asText(banner.button_label) }}
-      </prismic-link>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  name: "homepage-banner",
-  props: ["banner"],
-};
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "HomepageBanner",
+  props: {
+    banner: {
+      type: Object,
+      required: true,
+    },
+  },
+});
 </script>
 
 <style lang="sass" scoped>
 .homepage-banner
-  margin: -70px 0 80px
-  padding: 10em 0 8em
   background-position: center center
   background-size: cover
   color: #ffffff

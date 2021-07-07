@@ -3,8 +3,8 @@
  * https://prismic.io/docs/vuejs/beyond-the-api/html-serializer
  */
 
-import linkResolver from "./link-resolver";
 import prismicDOM from "prismic-dom";
+import linkResolver from "./link-resolver";
 
 const Elements = prismicDOM.RichText.Elements;
 
@@ -51,12 +51,12 @@ export default function (type, element, content, children) {
   }
 
   if (type === Elements.heading2) {
-    var id = element.text.replace(/\W+/g, "-").toLowerCase();
+    const id = element.text.replace(/\W+/g, "-").toLowerCase();
     return '<h2 id="' + id + '">' + children.join("") + "</h2>";
   }
 
   if (type === Elements.heading3) {
-    var id = element.text.replace(/\W+/g, "-").toLowerCase();
+    const id = element.text.replace(/\W+/g, "-").toLowerCase();
     return '<h3 id="' + id + '">' + children.join("") + "</h3>";
   }
 

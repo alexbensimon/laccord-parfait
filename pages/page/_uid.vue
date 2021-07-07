@@ -10,14 +10,9 @@
 import SlicesBlock from "~/components/SlicesBlock.vue";
 
 export default {
-  name: "page",
+  name: "Page",
   components: {
     SlicesBlock,
-  },
-  head() {
-    return {
-      title: "L'accord parfait",
-    };
   },
   async asyncData({ $prismic, params, error }) {
     try {
@@ -32,6 +27,11 @@ export default {
       // Returns error page
       error({ statusCode: 404, message: "Page not found" });
     }
+  },
+  head() {
+    return {
+      title: "L'accord parfait",
+    };
   },
 };
 </script>
