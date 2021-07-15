@@ -3,13 +3,16 @@
     <prismic-rich-text :field="slice.primary.gallery_title" />
     <div class="gallery">
       <div v-for="item in slice.items" :key="item.id" class="gallery-item">
-        <prismic-link :field="item.link">
+        <component
+          :is="item.link.id ? 'prismic-link' : 'div'"
+          :field="item.link"
+        >
           <prismic-image :field="item.image" />
           <prismic-rich-text :field="item.image_description" />
           <p class="uppercase text-center mt-2">
             {{ $prismic.asText(item.link_label) }}
           </p>
-        </prismic-link>
+        </component>
       </div>
     </div>
   </section>
