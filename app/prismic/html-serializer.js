@@ -15,13 +15,15 @@ export default function (type, element, content, children) {
     let result = "";
     const url = prismicDOM.Link.url(element.data, linkResolver);
 
-    if (element.data.link_type === "Document") {
-      result = `<a href="${url}" data-nuxt-link>${content}</a>`;
-    } else {
-      const target = element.data.target
-        ? `target="'${element.data.target}'" rel="noopener"`
-        : "";
-      result = `<a href="${url}" ${target}>${content}</a>`;
+    if (element.data) {
+      if (element.data.link_type === "Document") {
+        result = `<a href="${url}" data-nuxt-link>${content}</a>`;
+      } else {
+        const target = element.data.target
+          ? `target="'${element.data.target}'" rel="noopener"`
+          : "";
+        result = `<a href="${url}" ${target}>${content}</a>`;
+      }
     }
     return result;
   }
@@ -36,11 +38,18 @@ export default function (type, element, content, children) {
     if (element.linkTo) {
       const url = prismicDOM.Link.url(element.linkTo, linkResolver);
 
-      if (element.data.link_type === "Document") {
-        result = `<a href="${url}" data-nuxt-link>${result}</a>`;
+      if (element.data) {
+        if (element.data.link_type === "Document") {
+          result = `<a href="${url}" data-nuxt-link>${result}</a>`;
+        } else {
+          const target = element.data.target
+            ? `target="'${element.data.target}'" rel="noopener"`
+            : "";
+          result = `<a href="${url}" ${target}>${result}</a>`;
+        }
       } else {
-        const target = element.data.target
-          ? `target="'${element.data.target}'" rel="noopener"`
+        const target = element.linkTo.target
+          ? `target="'${element.linkTo.target}'" rel="noopener"`
           : "";
         result = `<a href="${url}" ${target}>${result}</a>`;
       }
