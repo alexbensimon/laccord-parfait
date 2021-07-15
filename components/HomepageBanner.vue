@@ -1,6 +1,6 @@
 <template>
   <section
-    class="homepage-banner mb-20 -mt-16 pt-20 pb-20 space-y-4"
+    class="homepage-banner mb-20 -mt-16 pt-20 pb-10 space-y-4"
     :style="{
       backgroundImage: 'url(' + banner.image.url + ')',
     }"
@@ -9,7 +9,7 @@
 
     <!-- Template for page title. -->
     <div class="banner-content container">
-      <h2 class="banner-title">
+      <h2 class="font-black text-6xl text-cod-gray">
         {{ $prismic.asText(banner.title) }}
       </h2>
     </div>
@@ -49,12 +49,6 @@ export default class HomepageBanner extends Vue {
   max-width: 800px
   margin-left: auto
   margin-right: auto
-
-.banner-title
-  color: #1A1919
-  font-size: 70px
-  font-weight: 900
-  line-height: 70px
 
 .banner-button
   background: #AA9461
