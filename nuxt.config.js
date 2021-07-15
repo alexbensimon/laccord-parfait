@@ -57,6 +57,7 @@ export default {
 
   prismic: {
     endpoint: "https://laccord-parfait.cdn.prismic.io/api/v2",
+    modern: true,
   },
 
   /*
