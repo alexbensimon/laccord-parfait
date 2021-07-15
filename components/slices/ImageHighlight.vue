@@ -17,10 +17,22 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
+import { Link, RichText } from "~/types/prismic";
+
+/* eslint-disable camelcase */
+type ImageHighlightSliceType = {
+  primary: {
+    title: RichText;
+    headline: RichText;
+    link: Link;
+    link_label: RichText;
+    featured_image: Record<string, unknown>;
+  };
+};
 
 @Component
 export default class ImageHighlight extends Vue {
-  @Prop({ required: true }) slice!: Record<string, unknown>;
+  @Prop({ required: true }) slice!: ImageHighlightSliceType;
 }
 </script>
 

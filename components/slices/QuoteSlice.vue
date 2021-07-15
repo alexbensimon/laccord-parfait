@@ -8,10 +8,18 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
+import { RichText } from "~/types/prismic";
+
+/* eslint-disable camelcase */
+type QuoteSliceType = {
+  primary: {
+    quote_text: RichText;
+  };
+};
 
 @Component
 export default class QuoteSlice extends Vue {
-  @Prop({ required: true }) slice!: Record<string, unknown>;
+  @Prop({ required: true }) slice!: QuoteSliceType;
 }
 </script>
 

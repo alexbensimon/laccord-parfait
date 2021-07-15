@@ -7,9 +7,16 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
 
+/* eslint-disable camelcase */
+type FullWidthImageSliceType = {
+  primary: {
+    image: Record<string, unknown>;
+  };
+};
+
 @Component
 export default class FullWidthImage extends Vue {
-  @Prop({ required: true }) slice!: Record<string, unknown>;
+  @Prop({ required: true }) slice!: FullWidthImageSliceType;
 }
 </script>
 

@@ -8,7 +8,7 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 // Imports for Prismic Slice components
-import SlicesBlock from "~/components/SlicesBlock.vue";
+import SlicesBlock, { Slice } from "~/components/SlicesBlock.vue";
 
 @Component({
   components: {
@@ -34,5 +34,7 @@ import SlicesBlock from "~/components/SlicesBlock.vue";
     }
   },
 })
-export default class Page extends Vue {}
+export default class Page extends Vue {
+  slices!: Array<Slice>;
+}
 </script>

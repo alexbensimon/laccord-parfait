@@ -10,8 +10,8 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 // Imports for all components
-import HomepageBanner from "~/components/HomepageBanner.vue";
-import SlicesBlock from "~/components/SlicesBlock.vue";
+import HomepageBanner, { Banner } from "~/components/HomepageBanner.vue";
+import SlicesBlock, { Slice } from "~/components/SlicesBlock.vue";
 
 @Component({
   components: {
@@ -40,5 +40,8 @@ import SlicesBlock from "~/components/SlicesBlock.vue";
     }
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  banner!: Banner;
+  slices!: Array<Slice>;
+}
 </script>

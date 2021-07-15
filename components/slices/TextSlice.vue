@@ -8,10 +8,19 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
+import { RichText } from "~/types/prismic";
+
+/* eslint-disable camelcase */
+type TextSliceType = {
+  primary: {
+    rich_text: RichText;
+  };
+  slice_label: string;
+};
 
 @Component
 export default class TextSlice extends Vue {
-  @Prop({ required: true }) slice!: Record<string, unknown>;
+  @Prop({ required: true }) slice!: TextSliceType;
 }
 </script>
 

@@ -17,10 +17,25 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
+import { Link, RichText } from "~/types/prismic";
+
+/* eslint-disable camelcase */
+type ImageGallerySliceType = {
+  primary: {
+    gallery_title: RichText;
+  };
+  items: Array<{
+    id: string;
+    image: Record<string, unknown>;
+    image_description: RichText;
+    link: Link;
+    link_label: RichText;
+  }>;
+};
 
 @Component
 export default class ImageGallery extends Vue {
-  @Prop({ required: true }) slice!: Record<string, unknown>;
+  @Prop({ required: true }) slice!: ImageGallerySliceType;
 }
 </script>
 

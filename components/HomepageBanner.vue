@@ -18,10 +18,18 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
+import { RichText } from "~/types/prismic";
+
+export type Banner = {
+  title: RichText;
+  image: {
+    url: string;
+  };
+};
 
 @Component
 export default class HomepageBanner extends Vue {
-  @Prop({ required: true }) banner!: Record<string, unknown>;
+  @Prop({ required: true }) banner!: Banner;
 }
 </script>
 

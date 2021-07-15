@@ -5,14 +5,14 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Nuxt + Prismic",
+    title: "L'accord parfait",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Nuxt + Prismic showcase",
+        content: "Le lieu incontournable de votre beauté",
       },
     ],
     link: [
@@ -67,9 +67,9 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
+    extend(config) {
       // to transform link with <nuxt-link> for the htmlSerializer
-      config.resolve.alias["vue"] = "vue/dist/vue.common";
+      config.resolve.alias.vue = "vue/dist/vue.common";
     },
   },
 

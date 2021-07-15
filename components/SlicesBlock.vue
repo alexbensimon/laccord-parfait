@@ -36,7 +36,7 @@ const FullWidthImage = () => import("./slices/FullWidthImage.vue");
 const ImageGallery = () => import("./slices/ImageGallery.vue");
 const ImageHighlight = () => import("./slices/ImageHighlight.vue");
 
-type Slice = {
+export type Slice = {
   // eslint-disable-next-line camelcase
   slice_type:
     | "text_section"
