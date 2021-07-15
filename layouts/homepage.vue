@@ -1,16 +1,20 @@
 <template>
-  <div class="homepage">
-    <header-prismic />
-    <nuxt />
+  <div>
+    <div class="homepage">
+      <header-prismic />
+      <nuxt />
+    </div>
+    <footer-custom />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 import HeaderPrismic from "~/components/HeaderPrismic.vue";
+import FooterCustom from "~/components/FooterCustom.vue";
 
 @Component({
-  components: { HeaderPrismic },
+  components: { HeaderPrismic, FooterCustom },
   head() {
     return {
       title: "L'accord parfait",
