@@ -3,13 +3,13 @@
     <prismic-rich-text :field="slice.primary.gallery_title" />
     <div class="gallery">
       <div v-for="item in slice.items" :key="item.id" class="gallery-item">
-        <prismic-image :field="item.image" />
-        <prismic-rich-text :field="item.image_description" />
-        <p>
-          <prismic-link :field="item.link" class="gallery-link">{{
-            $prismic.asText(item.link_label)
-          }}</prismic-link>
-        </p>
+        <prismic-link :field="item.link">
+          <prismic-image :field="item.image" />
+          <prismic-rich-text :field="item.image_description" />
+          <p class="uppercase text-center mt-2">
+            {{ $prismic.asText(item.link_label) }}
+          </p>
+        </prismic-link>
       </div>
     </div>
   </section>
@@ -59,10 +59,6 @@ export default class ImageGallery extends Vue {
   -webkit-flex: 0 1 48%
   -ms-flex: 0 1 48%
   flex: 0 1 48%
-
-.gallery-link
-  margin-top: -20px
-  text-transform: uppercase
 
 @media (max-width: 767px)
   .content-section
