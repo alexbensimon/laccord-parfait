@@ -1,13 +1,17 @@
 <template>
-  <section class='content-section quote'>
-    <blockquote class="block-quotation">{{ $prismic.asText(slice.primary.quote_text) }}</blockquote>
+  <section class="content-section quote">
+    <blockquote class="block-quotation">
+      {{ $prismic.asText(slice.primary.quote_text) }}
+    </blockquote>
   </section>
 </template>
 
-<script>
-export default {
-  props: ['slice'],
-  name: 'quote-slice'
+<script lang="ts">
+import { Vue, Component, Prop } from "nuxt-property-decorator";
+
+@Component
+export default class QuoteSlice extends Vue {
+  @Prop({ required: true }) slice!: Record<string, unknown>;
 }
 </script>
 
@@ -51,4 +55,3 @@ export default {
   .quote
     font-size: 20px
 </style>
-

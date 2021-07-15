@@ -5,14 +5,19 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from "nuxt-property-decorator";
 // Imports for Prismic Slice components
 import SlicesBlock from "~/components/SlicesBlock.vue";
 
-export default {
-  name: "Page",
+@Component({
   components: {
     SlicesBlock,
+  },
+  head() {
+    return {
+      title: "L'accord parfait",
+    };
   },
   async asyncData({ $prismic, params, error }) {
     try {
@@ -28,10 +33,6 @@ export default {
       error({ statusCode: 404, message: "Page not found" });
     }
   },
-  head() {
-    return {
-      title: "L'accord parfait",
-    };
-  },
-};
+})
+export default class Page extends Vue {}
 </script>

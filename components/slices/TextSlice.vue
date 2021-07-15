@@ -1,11 +1,17 @@
 <template>
-  <prismic-rich-text class="content-section" :class="'text-section-' + slice.slice_label" :field="slice.primary.rich_text"/>
+  <prismic-rich-text
+    class="content-section"
+    :class="'text-section-' + slice.slice_label"
+    :field="slice.primary.rich_text"
+  />
 </template>
 
-<script>
-export default {
-  props: ['slice'],
-  name: 'text-slice'
+<script lang="ts">
+import { Vue, Component, Prop } from "nuxt-property-decorator";
+
+@Component
+export default class TextSlice extends Vue {
+  @Prop({ required: true }) slice!: Record<string, unknown>;
 }
 </script>
 
@@ -33,4 +39,3 @@ export default {
     -moz-column-gap: 40px
     column-gap: 40px
 </style>
-

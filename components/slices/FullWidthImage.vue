@@ -4,16 +4,13 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "ImageCaptionSlice",
-  props: {
-    slice: {
-      type: Object,
-      required: true,
-    },
-  },
-};
+<script lang="ts">
+import { Vue, Component, Prop } from "nuxt-property-decorator";
+
+@Component
+export default class FullWidthImage extends Vue {
+  @Prop({ required: true }) slice!: Record<string, unknown>;
+}
 </script>
 
 <style lang="sass" scoped>

@@ -17,17 +17,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Vue, Component, Prop } from "nuxt-property-decorator";
 
-export default Vue.extend({
-  name: "HomepageBanner",
-  props: {
-    banner: {
-      type: Object,
-      required: true,
-    },
-  },
-});
+@Component
+export default class HomepageBanner extends Vue {
+  @Prop({ required: true }) banner!: Record<string, unknown>;
+}
 </script>
 
 <style lang="sass" scoped>

@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Vue, Component, Prop } from "nuxt-property-decorator";
 
 // Imports for all slices
 const TextSlice = () => import("./slices/TextSlice.vue");
@@ -36,8 +36,17 @@ const FullWidthImage = () => import("./slices/FullWidthImage.vue");
 const ImageGallery = () => import("./slices/ImageGallery.vue");
 const ImageHighlight = () => import("./slices/ImageHighlight.vue");
 
-export default Vue.extend({
-  name: "SlicesBlock",
+type Slice = {
+  // eslint-disable-next-line camelcase
+  slice_type:
+    | "text_section"
+    | "quote"
+    | "full_width_image"
+    | "image_gallery"
+    | "image_highlight";
+};
+
+@Component({
   components: {
     TextSlice,
     QuoteSlice,
@@ -45,6 +54,8 @@ export default Vue.extend({
     ImageGallery,
     ImageHighlight,
   },
-  props: ["slices"],
-});
+})
+export default class SlicesBlock extends Vue {
+  @Prop({ required: true }) slices!: Array<Slice>;
+}
 </script>

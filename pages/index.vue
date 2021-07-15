@@ -7,18 +7,23 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from "nuxt-property-decorator";
 // Imports for all components
 import HomepageBanner from "~/components/HomepageBanner.vue";
 import SlicesBlock from "~/components/SlicesBlock.vue";
 
-export default {
-  name: "Home",
+@Component({
   components: {
     HomepageBanner,
     SlicesBlock,
   },
   layout: "homepage",
+  head() {
+    return {
+      title: "L'accord parfait",
+    };
+  },
   async asyncData({ $prismic, error }) {
     try {
       // Query to get the home page content
@@ -34,10 +39,6 @@ export default {
       error({ statusCode: 404, message: "Page not found" });
     }
   },
-  head() {
-    return {
-      title: "L'accord parfait",
-    };
-  },
-};
+})
+export default class Home extends Vue {}
 </script>
