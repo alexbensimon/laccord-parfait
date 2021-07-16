@@ -1,15 +1,15 @@
 <template>
   <section
-    class="homepage-banner mb-20 -mt-16 pt-20 pb-10 space-y-4"
+    class="homepage-banner mb-20 -mt-16 pt-20 pb-10"
     :style="{
       backgroundImage: 'url(' + banner.image.url + ')',
     }"
   >
-    <img class="max-w-lg inline-block" :src="$store.state.menu.logo.url" />
+    <img class="max-w-xl inline-block" :src="$store.state.menu.logo.url" />
 
     <!-- Template for page title. -->
     <div class="banner-content container">
-      <h2 class="font-black text-6xl text-cod-gray">
+      <h2 class="font-black text-2xl text-cod-gray">
         {{ $prismic.asText(banner.title) }}
       </h2>
     </div>
