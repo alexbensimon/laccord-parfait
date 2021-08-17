@@ -36,11 +36,18 @@
             <img width="24" height="24" src="~/assets/img/facebook.svg" />
           </a>
           <a
-            href="https://www.instagram.com/lamanucuredeparis/"
+            href="https://www.instagram.com/laccordparfaitinstitut/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img width="24" height="24" src="~/assets/img/instagram.svg" />
+          </a>
+          <a
+            href="https://g.page/laccordparfaitinstitut?share"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img width="24" height="24" src="~/assets/img/google.svg" />
           </a>
         </div>
       </div>
