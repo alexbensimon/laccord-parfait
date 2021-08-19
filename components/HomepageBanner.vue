@@ -1,10 +1,5 @@
 <template>
-  <section
-    class="homepage-banner mb-20 -mt-16 pt-20 pb-10"
-    :style="{
-      backgroundImage: 'url(' + banner.image.url + ')',
-    }"
-  >
+  <section class="homepage-banner mb-20 -mt-16 pt-20 pb-10">
     <img class="max-w-xl inline-block" :src="$store.state.menu.logo.url" />
 
     <!-- Template for page title. -->
