@@ -1,7 +1,7 @@
 <template>
   <section class="content-section">
     <prismic-rich-text :field="slice.primary.gallery_title" />
-    <div class="flex flex-wrap justify-between px-3">
+    <div class="flex flex-wrap justify-evenly px-3">
       <div v-for="item in slice.items" :key="item.id" class="w-72 h-96">
         <component
           :is="item.link.id ? 'prismic-link' : 'div'"

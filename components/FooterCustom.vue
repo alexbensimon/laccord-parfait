@@ -1,10 +1,10 @@
 <template>
-  <div class="py-10 w-full bg-gray-100">
+  <div class="px-3 py-10 w-full bg-gray-100">
     <footer>
       <div class="flex items-center justify-between space-x-4">
         <div>
           <h3>Marques partenaires</h3>
-          <div class="flex space-x-2">
+          <div class="flex flex-wrap space-x-2">
             <img
               width="120"
               class="object-contain"
@@ -27,7 +27,7 @@
             />
           </div>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex flex-shrink-0 space-x-4">
           <a
             href="https://www.facebook.com/avbinstituts/"
             target="_blank"

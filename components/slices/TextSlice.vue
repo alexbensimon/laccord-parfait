@@ -1,6 +1,6 @@
 <template>
   <prismic-rich-text
-    class="content-section"
+    class="content-section px-3"
     :class="'text-section-' + slice.slice_label"
     :field="slice.primary.rich_text"
   />
