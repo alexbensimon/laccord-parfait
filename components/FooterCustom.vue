@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gray-100 w-full py-10">
+  <div class="py-10 w-full bg-gray-100">
     <footer>
-      <div class="flex justify-between space-x-4 items-center">
+      <div class="flex items-center justify-between space-x-4">
         <div>
           <h3>Marques partenaires</h3>
           <div class="flex space-x-2">

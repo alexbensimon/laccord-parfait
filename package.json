@@ -33,6 +33,7 @@
     "nodemon": "^2.0.6",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
+    "prettier-plugin-tailwind": "^2.2.12",
     "prismic-javascript": "^3.0.2",
     "sass": "^1.34.1",
     "sass-loader": "^10.1.0",

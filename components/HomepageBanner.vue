@@ -1,10 +1,10 @@
 <template>
-  <section class="homepage-banner mb-20 -mt-16 pt-20 pb-10">
-    <img class="max-w-xl inline-block" :src="$store.state.menu.logo.url" />
+  <section class="homepage-banner -mt-16 mb-20 pb-10 pt-20">
+    <img class="inline-block max-w-xl" :src="$store.state.menu.logo.url" />
 
     <!-- Template for page title. -->
     <div class="banner-content container">
-      <h2 class="font-black text-2xl text-cod-gray">
+      <h2 class="text-cod-gray text-2xl font-black">
         {{ $prismic.asText(banner.title) }}
       </h2>
     </div>

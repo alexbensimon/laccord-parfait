@@ -4,7 +4,7 @@
     :class="isRootRoute ? 'justify-end' : 'justify-between'"
   >
     <nuxt-link v-if="!isRootRoute" to="/">
-      <img class="w-72 inline-block mt-5" :src="$store.state.menu.logo.url" />
+      <img class="inline-block mt-5 w-72" :src="$store.state.menu.logo.url" />
     </nuxt-link>
     <nav>
       <ul>
