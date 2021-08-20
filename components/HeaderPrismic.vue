@@ -1,21 +1,26 @@
 <template>
-  <header
-    class="site-header flex items-center mt-5"
-    :class="isRootRoute ? 'justify-end' : 'justify-between'"
-  >
-    <nuxt-link v-if="!isRootRoute" to="/">
-      <img class="inline-block mt-5 w-72" :src="$store.state.menu.logo.url" />
-    </nuxt-link>
-    <nav>
-      <ul>
-        <li v-for="menuLink in $store.state.menu.menu_links" :key="menuLink.id">
-          <prismic-link :field="menuLink.link">{{
-            $prismic.asText(menuLink.label)
-          }}</prismic-link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class="bg-tundora py-5">
+    <header
+      class="site-header flex items-center"
+      :class="isRootRoute ? 'justify-end' : 'justify-between'"
+    >
+      <nuxt-link v-if="!isRootRoute" to="/">
+        <img class="inline-block mt-5 w-72" :src="$store.state.menu.logo.url" />
+      </nuxt-link>
+      <nav>
+        <ul>
+          <li
+            v-for="menuLink in $store.state.menu.menu_links"
+            :key="menuLink.id"
+          >
+            <prismic-link :field="menuLink.link">{{
+              $prismic.asText(menuLink.label)
+            }}</prismic-link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 </template>
 
 <script lang="ts">
@@ -34,7 +39,7 @@ export default class HeaderPrismic extends Vue {
   color: #484d52
   font-weight: 700
   a
-    color: #1A1919
+    color: #fff
     font-weight: 700
   nav a:hover
     color: #72767B
