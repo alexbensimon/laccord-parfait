@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-tundora py-5">
+  <div class="pb-5 pt-4 bg-tundora">
     <header
       class="site-header flex items-center"
       :class="isRootRoute ? 'justify-end' : 'justify-between'"
@@ -42,7 +42,7 @@ export default class HeaderPrismic extends Vue {
     color: #fff
     font-weight: 700
   nav a:hover
-    color: #72767B
+    color: #c4a35d
 
 .site-header
   nav

@@ -1,12 +1,6 @@
 * {
   -webkit-font-smoothing: antialiased;
 }
-::selection {
-  background: #fff7c7; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #fff7c7; /* Gecko Browsers */
-}
 
 /*
  * Globals

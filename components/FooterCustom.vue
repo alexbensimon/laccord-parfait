@@ -27,28 +27,31 @@
             />
           </div>
         </div>
-        <div class="flex flex-shrink-0 space-x-4">
-          <a
-            href="https://www.facebook.com/avbinstituts/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img width="24" height="24" src="~/assets/img/facebook.svg" />
-          </a>
-          <a
-            href="https://www.instagram.com/laccordparfaitinstitut/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img width="24" height="24" src="~/assets/img/instagram.svg" />
-          </a>
-          <a
-            href="https://g.page/laccordparfaitinstitut?share"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img width="24" height="24" src="~/assets/img/google.svg" />
-          </a>
+        <div class="flex flex-col flex-shrink-0 items-center space-y-2">
+          <div class="flex space-x-4">
+            <a
+              href="https://www.facebook.com/avbinstituts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img width="24" height="24" src="~/assets/img/facebook.svg" />
+            </a>
+            <a
+              href="https://www.instagram.com/laccordparfaitinstitut/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img width="24" height="24" src="~/assets/img/instagram.svg" />
+            </a>
+            <a
+              href="https://g.page/laccordparfaitinstitut?share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img width="24" height="24" src="~/assets/img/google.svg" />
+            </a>
+          </div>
+          <div class="self-center">89 Rue de la Pompe - 75116 Paris</div>
         </div>
       </div>
     </footer>
