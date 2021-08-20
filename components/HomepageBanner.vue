@@ -54,12 +54,4 @@ export default class HomepageBanner extends Vue {
   padding: 15px 40px
   &:hover
     background: #c8c9cb
-
-@media (max-width: 767px)
-  .homepage-banner
-    margin: 0 0 40px
-    padding: 10em 0 6em
-  .banner-title
-    font-size: 50px
-    line-height: 50px
 </style>

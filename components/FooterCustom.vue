@@ -1,7 +1,15 @@
 <template>
   <div class="px-3 py-10 w-full bg-gray-100">
     <footer>
-      <div class="flex items-center justify-between space-x-4">
+      <div
+        class="
+          flex flex-col
+          items-center
+          justify-between
+          space-x-4 space-y-10
+          lg:flex-row lg:space-y-0
+        "
+      >
         <div>
           <h3>Marques partenaires</h3>
           <div class="flex flex-wrap space-x-2">

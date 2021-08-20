@@ -58,25 +58,4 @@ export default class HeaderPrismic extends Vue {
   .site-header
     padding-left: 20px
     padding-right: 20px
-
-@media (max-width: 767px)
-  .site-header
-    height: auto
-
-  .homepage .site-header
-    position: absolute
-    left: 0
-    right: 0
-
-  .site-header
-    .logo
-      display: block
-      text-align: center
-    nav
-      float: none
-      text-align: center
-      li
-        display: inline-block
-        margin-left: 10px
-        margin-right: 10px
 </style>
