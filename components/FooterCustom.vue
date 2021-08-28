@@ -58,6 +58,13 @@
             >
               <img width="24" height="24" src="~/assets/img/google.svg" />
             </a>
+            <a
+              href="https://www.planity.com/laccord-parfait-paris-16-75116"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img width="24" height="24" src="~/assets/img/planity.png" />
+            </a>
           </div>
           <div class="self-center">89 Rue de la Pompe - 75116 Paris</div>
         </div>
