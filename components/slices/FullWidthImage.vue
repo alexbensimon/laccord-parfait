@@ -1,5 +1,5 @@
 <template>
-  <section class="full-width-image content-section mt-20">
+  <section class="full-width-image content-section flex justify-center">
     <prismic-image :field="slice.primary.image" />
   </section>
 </template>

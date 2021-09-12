@@ -1,7 +1,9 @@
 <template>
   <div>
     <header-prismic />
-    <nuxt />
+    <div class="py-10">
+      <nuxt />
+    </div>
     <footer-custom />
   </div>
 </template>
