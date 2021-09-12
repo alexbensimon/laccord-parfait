@@ -1,9 +1,11 @@
 <template>
   <section class="homepage-banner -mt-16 mb-20 pb-10 pt-14 bg-tundora">
-    <img class="inline-block max-w-xl" :src="$store.state.menu.logo.url" />
+    <div class="inline-block max-w-xl">
+      <img class="w-full h-auto" :src="$store.state.menu.logo.url" />
+    </div>
 
     <!-- Template for page title. -->
-    <div class="banner-content container">
+    <div class="banner-content container px-2">
       <h2 class="text-white text-2xl font-medium">
         {{ $prismic.asText(banner.title) }}
       </h2>
@@ -30,8 +32,6 @@ export default class HomepageBanner extends Vue {
 
 <style lang="sass" scoped>
 .homepage-banner
-  background-position: center center
-  background-size: cover
   color: #ffffff
   line-height: 1.75
   text-align: center

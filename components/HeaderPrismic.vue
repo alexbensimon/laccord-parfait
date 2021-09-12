@@ -1,14 +1,24 @@
 <template>
-  <div class="pb-5 pt-4 bg-tundora">
+  <div class="pb-5 pt-4 bg-tundora" :class="{ 'md:p-0': !isRootRoute }">
     <header
-      class="site-header flex items-center"
-      :class="isRootRoute ? 'justify-end' : 'justify-between'"
+      class="
+        site-header
+        flex flex-col
+        items-center
+        justify-center
+        text-center
+        md:flex-row
+      "
+      :class="isRootRoute ? 'sm:justify-end' : 'sm:justify-between'"
     >
       <nuxt-link v-if="!isRootRoute" to="/">
-        <img class="inline-block mt-5 w-72" :src="$store.state.menu.logo.url" />
+        <img
+          class="inline-block w-72 md:mt-3"
+          :src="$store.state.menu.logo.url"
+        />
       </nuxt-link>
       <nav>
-        <ul>
+        <ul class="space-x-5 sm:space-x-10">
           <li
             v-for="menuLink in $store.state.menu.menu_links"
             :key="menuLink.id"
@@ -34,8 +44,6 @@ export default class HeaderPrismic extends Vue {
 
 <style lang="sass">
 .site-header
-  height: 30px
-  padding: 20px 0
   color: #484d52
   font-weight: 700
   a
@@ -52,7 +60,6 @@ export default class HeaderPrismic extends Vue {
       padding-left: 0
     li
       display: inline-block
-      margin-left: 40px
 
 @media (max-width: 1060px)
   .site-header
