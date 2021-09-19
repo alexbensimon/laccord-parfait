@@ -1,23 +1,11 @@
-# Prismic Nuxt.js Multi-page website example
-
 # L'accord parfait
 
-> [Nuxt.js](https://nuxtjs.org) example multi-page website project with content managed in [Prismic](https://prismic.io)
+https://laccordparfaitinstitut.com/ (in French 🇫🇷)
 
-## Check out our article for a step by step guide to getting this project up and running
+## Tech choices
 
-> [Prismic project guide](https://prismic.io/docs/technologies/getting-started-examples-simple-nuxtjs)
-
-## Learn more about things like deployment and Previews using Prismic with Nuxt.js
-
-> [Prismic Nuxt.js Documentation](https://prismic.io/docs/technologies/nuxtjs)
-
-## License
-
-This software is licensed under the Apache 2 license, quoted below.
-
-Copyright 2019 Prismic (http://prismic.io).
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+- [Nuxt](https://nuxtjs.org/) - For this kind of website, static generation at build time is the most effective (good SEO out of the box, easy hosting, etc.). Having used [Gatsby](https://github.com/alexbensimon/maman) and [Next](https://github.com/alexbensimon/personal-website) before, I wanted to try SSG with Vue.
+- [TypeScript](https://www.typescriptlang.org/) - For comfort.
+- [Tailwind](https://tailwindcss.com/) - Now my go-to styling system. I feel very productive with it.
+- [Prismic](https://prismic.io/) - A CMS is necessary to be able to modify the content of the website without having to touch the code. A headless CMS like Prismic gives us the flexibility of using our own frontend. Webhooks are used to trigger a build and deploy on Netlify when changes are made in the CMS.
+- [Netlify](https://www.netlify.com/) - Easy and free hosting for static websites.
