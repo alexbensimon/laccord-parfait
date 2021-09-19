@@ -10,9 +10,9 @@
           lg:flex-row lg:space-y-0
         "
       >
-        <div>
+        <div class="flex flex-col items-center lg:items-start">
           <h3>Marques partenaires</h3>
-          <div class="flex flex-wrap space-x-2">
+          <div class="flex flex-wrap justify-center space-x-2">
             <img
               width="120"
               class="object-contain"
