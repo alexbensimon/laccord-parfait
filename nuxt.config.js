@@ -12,7 +12,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Le lieu incontournable de votre beauté",
+        content:
+          "Le lieu incontournable de votre beauté. Institut dans le 16e arrondissement de Paris.",
       },
     ],
     link: [
