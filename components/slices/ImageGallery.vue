@@ -9,7 +9,14 @@
         >
           <prismic-image class="w-72 h-72" :field="item.image" />
           <!-- <prismic-rich-text :field="item.image_description" /> -->
-          <p class="mt-2 text-center uppercase">
+          <p
+            class="
+              mt-3
+              text-center text-tundora text-base
+              font-medium
+              uppercase
+            "
+          >
             {{ $prismic.asText(item.link_label) }}
           </p>
         </component>
