@@ -16,7 +16,7 @@
             <img
               width="120"
               class="object-contain"
-              src="~/assets/img/decleor.png"
+              src="~/assets/img/phytomer.png"
             />
             <img
               width="120"
